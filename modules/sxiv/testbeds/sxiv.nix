@@ -11,8 +11,5 @@ in
       "${pkgs.nixos-icons}/share/icons/hicolor/scalable/apps/nix-snowflake.svg";
   '';
 
-  home-manager.sharedModules = lib.singleton {
-    home.packages = [ package ];
-    stylix.targets.sxiv.enable = true;
-  };
+  home-manager.sharedModules = lib.singleton { home.packages = [ package ]; };
 }
