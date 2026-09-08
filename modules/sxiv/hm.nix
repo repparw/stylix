@@ -1,9 +1,7 @@
-{ mkTarget, ... }:
+{ mkTarget, config, ... }:
 mkTarget {
-  # Home Manager has no sxiv/nsxiv module which can provide an auto-enable
-  # guard. Enabling this target unconditionally would create ~/.Xresources even
-  # when neither program is installed.
-  autoEnable = false;
+  autoEnable = config.stylix.targets.x11.enable;
+  autoEnableExpr = "config.stylix.targets.x11.enable";
 
   config = [
     ({ fonts }: {
