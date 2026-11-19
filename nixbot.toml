@@ -1,2 +1,0 @@
-attribute = "ci.nixbot"
-build_branches = ["release-26.05"]
