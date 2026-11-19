@@ -17,6 +17,9 @@ colors: ''
       --base0E: #${colors.base0E}; /* Purple */
       --base0F: #${colors.base0F}; /* Magenta */
 
+      /* Keep secondary text readable when base04 is close to the background. */
+      --stylix-secondary-text: color-mix(in srgb, var(--base05) 70%, var(--base04) 30%);
+
       --primary-630: var(--base00); /* Autocomplete background */
       --primary-660: var(--base00); /* Search input background */
   }
@@ -103,7 +106,7 @@ colors: ''
       --button-secondary-background-hover: var(--base03) !important;
       --card-primary-bg: var(--base02) !important;
       --channel-icon: var(--base04) !important;
-      --channels-default: var(--base04) !important;
+      --channels-default: var(--stylix-secondary-text) !important;
       --channel-text-area-placeholder: var(--base03) !important;
       --channeltextarea-background: var(--base01) !important;
       --chat-background-default: var(--base02) !important;
@@ -120,7 +123,7 @@ colors: ''
       --green-330: var(--base0B) !important;
       --green-360: var(--base0B) !important;
       --header-primary: var(--base04) !important;
-      --header-secondary: var(--base04) !important;
+      --header-secondary: var(--stylix-secondary-text) !important;
       --home-background: var(--base00) !important;
       --info-warning-foreground: var(--base0A) !important;
       --input-background: var(--base02) !important;
@@ -179,7 +182,7 @@ colors: ''
       --text-normal: var(--base05) !important;
       --text-positive: var(--base0B) !important;
       --text-primary: var(--base05) !important;
-      --text-secondary: var(--base04) !important;
+      --text-secondary: var(--stylix-secondary-text) !important;
       --text-tertiary: var(--base03) !important;
       --text-warning: var(--base09) !important;
       --textbox-markdown-syntax: var(--base05) !important;
